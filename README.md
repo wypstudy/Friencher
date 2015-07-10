@@ -1,5 +1,5 @@
 # Friencher
-A software for teachers and students communication
+一款用于师生课堂互动的软件
 # 环境搭建
 安装python2.7  
 安装flask  
