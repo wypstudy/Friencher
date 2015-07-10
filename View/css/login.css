@@ -1,0 +1,48 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: url(../imgs/bg.jpg);
+  background-size: 100% 100%;
+}
+
+#container{
+  width: 400px;
+  margin: 70px auto;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 50px 40px 70px 40px;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+}
+h1{
+  text-align: center;
+  color: white;
+}
+#container p{
+  text-indent: 2em;
+  padding: 10px 0px;
+  line-height: 2em;
+}
+input[type="text"], input[type="password"]{
+  width: 250px;
+  padding: 15px 25px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  display: block;
+  margin: 10px 0px;
+  font-size: 14px;
+  color: #9d9e9e;
+  background: #fff;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+}
+.mybtn{
+  width: 100px;
+  margin-left: calc( 50% - 50px );
+}
+
+#register{
+  color: white;
+  text-align: right;
+  text-decoration: underline;
+}
