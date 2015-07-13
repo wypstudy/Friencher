@@ -9,24 +9,30 @@
   <!-- Site Properities -->
   <title>Friencher-Register</title>
 
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/register.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/register.css">
 
-  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/register.js"></script>
+  <script type="text/javascript" src="../static/js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../static/js/register.js"></script>
 
 </head>
 <body>
   <div id="container">
-    <div id="identi">
-      <div class="active">学生</div>
-      <div>老师</div>
-    </div>
-    <form>
+    <form method="post" >
+      <div id="identi">
+        <div class="active">
+          <label>
+            <input type="radio"name="identi" value="student" checked="checked" required="required"/>学生</label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="identi" value="teacher" required="required">老师</label>
+        </div>
+      </div>
       <div>
         <span>姓名</span>
-        <input type="text" name="name" required="required"/>
+        <input type="text" name="username" required="required"/>
         <span class="redstar">*</span>
       </div>
       <div>
@@ -54,31 +60,30 @@
       </div>
       <div  class="s-optional">
         <span>年级</span>
-        <select>
-          <option>2011级</option>
-          <option>2012级</option>
-          <option>2013级</option>
-          <option>2014级</option>
-          <option>2015级</option>
+        <select name="grad">
+          <option value="2011">2011级</option>
+          <option value="2012">2012级</option>
+          <option value="2013">2013级</option>
+          <option value="2014">2014级</option>
+          <option value="2015">2015级</option>
         </select>
       </div>
       <div>
         <span>学院</span>
-        <select>
-          <option>软件学院</option>
-          <option>信科院</option>
-          <option>管理学院</option>
-          <option>管理学院</option>
-          <option>政务学院</option>
+        <select name="school">
+          <option value="softeware school">软件学院</option>
+          <option value="information school">信科院</option>
+          <option value="management school">管理学院</option>
+          <option value="politic school">政务学院</option>
         </select>
       </div>
       <div class="s-optional">
         <span>专业</span>
-        <input type="text" name="major" />
+        <input type="text" name="maijor" />
       </div>
       <div class="t-optional">
         <span>激活码</span>
-        <input type="text" name="trigger" required='required' />
+        <input type="text" name="trigger"/>
         <span class='redstar'>*</span>
       </div>
       <input type="submit" class='btn mybtn btn-success' value="注册" />

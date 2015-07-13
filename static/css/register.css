@@ -7,9 +7,13 @@ body{
 #identi{
   font-size: 24px;
   line-height: 60px;
+  width: 500px;
   height: 60px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   text-align: center;
+}
+#identi input[type="radio"]{
+  opacity: 0;
 }
 #identi div{
   color: black;

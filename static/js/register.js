@@ -20,5 +20,4 @@
     $('.s-optional').hide();
     $('form div:eq(1) span:first').text('学工号');
   })
-  
 });

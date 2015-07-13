@@ -9,12 +9,12 @@
   <!-- Site Properities -->
   <title>Friencher-Home</title>
 
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/home.css">
 
-  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/home.js"></script>
+  <script type="text/javascript" src="../static/js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../static/js/home.js"></script>
 
 </head>
 <body>
@@ -39,22 +39,16 @@
     <div id="content">
       <div id="road">首页 / 我的课程</div>
       <div class="cource">
-        <img src="imgs/UML.jpg" />
         <div class="cource-name">系统分析与设计</div>
-        <div class="cource-teacher">衣扬</div>
-        <div class="cource-time">2015-3.1 - 2015.7.6</div>
+        <div class="cource-teacher"><span>授课老师：</span>衣扬</div>
+        <div ><span>课程类型：</span>必修</div>
+        <div class="cource-time"><span>时间： </span>2015-3.1 - 2015.7.6</div>
       </div>
       <div class="cource">
-        <img src="imgs/softwaretest.jpg" />
-        <div class="cource-name">软件测试</div>
-        <div class="cource-teacher">王欣明</div>
-        <div class="cource-time">2015-3.1 - 2015.7.6</div>
-      </div>
-      <div class="cource">
-        <img src="imgs/softwaretest.jpg" />
-        <div class="cource-name">软件测试</div>
-        <div class="cource-teacher">王欣明</div>
-        <div class="cource-time">2015-3.1 - 2015.7.6</div>
+        <div class="cource-name">{cource.name}</div>
+        <div class="cource-teacher"><span>授课老师：</span>{cource.teacher}</div>
+        <div><span>课程类型：</span>{course.type}</div>
+        <div class="cource-time"><span>时间： </span>{cource.start} - {cource.end}</div>
       </div>
     </div>
   </div>
