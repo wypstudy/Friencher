@@ -38,7 +38,9 @@ input[type="text"], input[type="password"]{
 }
 .mybtn{
   width: 100px;
+  height: 45px;
   margin-left: calc( 50% - 50px );
+  margin-top: 20px;
 }
 
 #register{
