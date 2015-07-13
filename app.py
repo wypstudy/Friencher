@@ -2,7 +2,18 @@
 # Author : Banehallow
 # Email  : 1140664142@qq.com
 from flask import Flask, request, render_template
+from flask import jsonify
+import dao
+
 app = Flask(__name__)
+
+@app.before_request
+def before_request():
+  dao.db.connect()
+
+@app.teardown_request
+def teardown_request(exc):
+  dao.db.close()
 
 @app.route('/')
 def home():
