@@ -6,6 +6,7 @@ def add(userInfo):
   if g.db['account'].find_one({'name' : userInfo.userName}) != NULL:
     return {'result' : 'fail'}
   else:
+    userInfo['courses'] = {}
     g.db.['account'].insert(userInfo)
     return {'result': 'success'}
 
