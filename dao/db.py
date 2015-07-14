@@ -2,7 +2,8 @@ from flask import g
 import pymongo
 
 def connect():
-  pass
+  g.connect = pymongo.Connection('localhost', 27017)
+  g.db = g.connect['friencher']
 
 def close():
-  pass
+  g.db.close()
