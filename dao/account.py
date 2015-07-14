@@ -7,6 +7,7 @@ def add(userInfo):
     return {'result' : 'fail'}
   else:
     userInfo['courses'] = {}
+    userInfo['role'] = 'student'
     g.db.['account'].insert(userInfo)
     return {'result': 'success'}
 
