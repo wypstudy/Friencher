@@ -26,7 +26,7 @@ class BaseService:
 
   def query(self, condition):
     re = dao.op.query(self.table, condition)
-    if info.has_key('msg'):
+    if re.has_key('msg'):
       re['result'] = 'success'
     else:
       re['result'] = 'fail'

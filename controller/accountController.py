@@ -17,4 +17,14 @@ def register(args):
     return {'result' : 'fail', 'msg' : g.err['arg']}
 
 def login(args):
-  pass
+  if args.has_key('username') and args.has_key('password'):
+    condition = {
+      'username' : args['username'],
+      'password' : args['password'],
+    }
+    ser = service.accountService.AccountService()
+    re = ser.query(condition)
+    if re['result'] == 'success':
+      return {'result' : 'success'}
+    else:
+      return {'result' : 'fail'}
