@@ -25,6 +25,5 @@ def login(args):
     ser = service.accountService.AccountService()
     re = ser.query(condition)
     if re['result'] == 'success':
-      return {'result' : 'success'}
-    else:
-      return {'result' : 'fail'}
+      del re['msg']['password']
+    return re
