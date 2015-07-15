@@ -3,17 +3,12 @@
 # Email  : 1140664142@qq.com
 from flask import Flask, request, render_template
 from flask import jsonify
-import dao
+import util
+import g
+import pymongo
+import controller
 
 app = Flask(__name__)
-
-@app.before_request
-def before_request():
-  dao.db.connect()
-
-@app.teardown_request
-def teardown_request(exc):
-  dao.db.close()
 
 @app.route('/')
 def home():
@@ -24,7 +19,9 @@ def register():
   if request.method == 'GET':
     return render_template('register.html')
   if request.method == 'POST':
-    pass
+    data = request.form.to_dict(flat=True)
+    ctrl = controller.accountController
+    return jsonify(ctrl.register(data))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -35,5 +32,11 @@ def login():
 
 if __name__ == '__main__':
   app.debug = True
+  g.client = pymongo.MongoClient('localhost', 27017)
+  g.db = g.client['friencher']
+  g.err = {
+    'arg'  : 'not enough arguments',
+    'dbe'  : 'object already in the database',
+    'dbne' : 'object is not in the database'
+  }
   app.run()
-
